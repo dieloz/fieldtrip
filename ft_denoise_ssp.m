@@ -162,9 +162,10 @@ if ischar(cfg.ssp)
   cfg.ssp = {cfg.ssp};
 end
 
+% select all or none of the balancing
 if isequal(cfg.ssp, {'all'})
   cfg.ssp = setdiff(fieldnames(data.grad.balance), {'current'});
-elseif isequal(cfg.ssp, 'none')
+elseif isequal(cfg.ssp, {'none'})
   cfg.ssp = {};
 end
 
